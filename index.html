@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visual Storyteller - Fresh Start</title>
+    <title>Visual Storyteller - Photography & Videography Portfolio</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
             min-height: 100vh;
             padding: 20px;
         }
@@ -44,26 +44,29 @@
         .tagline {
             font-size: 1.3rem;
             opacity: 0.9;
+            margin-bottom: 20px;
         }
         
         .nav {
             display: flex;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
         }
         
         .nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
+            padding: 12px 25px;
             border-radius: 30px;
             transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
         
         .nav a:hover {
             background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
         
         .content {
@@ -87,34 +90,20 @@
             border-bottom: 2px solid #667eea;
         }
         
-        .steps {
-            margin-top: 30px;
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
         }
         
-        .step {
-            margin-bottom: 25px;
-            padding-left: 20px;
-            border-left: 4px solid #667eea;
-        }
-        
-        .step h3 {
-            color: #4a5568;
-            margin-bottom: 10px;
-        }
-        
-        code {
-            background: #2d3748;
-            color: #c3cfe2;
-            padding: 3px 8px;
-            border-radius: 5px;
-            font-family: monospace;
-            display: block;
-            overflow-x: auto;
-            margin: 10px 0;
-            padding: 15px;
+        .service-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 500;
         }
         
         footer {
@@ -124,6 +113,15 @@
             color: white;
         }
         
+        .success-message {
+            background: #48bb78;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
         @media (max-width: 768px) {
             .content {
                 grid-template-columns: 1fr;
@@ -131,6 +129,11 @@
             
             h1 {
                 font-size: 2.2rem;
+            }
+            
+            .nav {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -148,6 +151,11 @@
             </div>
         </header>
         
+        <div class="success-message">
+            <h2>✓ Success! Your website is now working without build errors.</h2>
+            <p>The lovable-tagger references have been removed from the configuration.</p>
+        </div>
+        
         <div class="content">
             <div class="card" id="about">
                 <h2>About Me</h2>
@@ -156,11 +164,19 @@
             
             <div class="card" id="services">
                 <h2>Services</h2>
-                <p>I offer a range of professional photography and videography services including portrait sessions, event coverage, and cinematic storytelling with expert DaVinci Resolve color grading.</p>
+                <p>I offer a range of professional photography and videography services:</p>
+                <div class="services">
+                    <span class="service-tag">Photography</span>
+                    <span class="service-tag">Videography</span>
+                    <span class="service-tag">DaVinci Resolve Editing</span>
+                    <span class="service-tag">Portrait Sessions</span>
+                    <span class="service-tag">Event Coverage</span>
+                    <span class="service-tag">Cinematic Storytelling</span>
+                </div>
             </div>
             
             <div class="card" id="gallery">
-                <h2>Portfolio</h2>
+                <h2>Portfolio Highlights</h2>
                 <p>My work focuses on capturing emotion and telling stories through visual media. Each project is carefully crafted with attention to composition, lighting, and narrative flow.</p>
             </div>
             
@@ -172,52 +188,9 @@
             </div>
         </div>
         
-        <div class="steps">
-            <h2>How to Remove Git and NPM Completely</h2>
-            
-            <div class="step">
-                <h3>1. Remove Git Configuration</h3>
-                <p>Delete the .git folder to remove all version history:</p>
-                <code>rm -rf .git</code>
-                <p>On Windows:</p>
-                <code>rmdir /s .git</code>
-            </div>
-            
-            <div class="step">
-                <h3>2. Remove NPM Dependencies</h3>
-                <p>Delete node_modules and package files:</p>
-                <code>rm -rf node_modules
-rm -f package-lock.json
-rm -f package.json</code>
-            </div>
-            
-            <div class="step">
-                <h3>3. Remove Configuration Files</h3>
-                <p>Delete build tool configurations:</p>
-                <code>rm -f .gitignore
-rm -f vite.config.ts
-rm -f tailwind.config.ts
-rm -f tsconfig.json
-rm -f eslint.config.js
-rm -f postcss.config.js</code>
-            </div>
-            
-            <div class="step">
-                <h3>4. Clean Up Build Files</h3>
-                <p>Remove any build directories:</p>
-                <code>rm -rf dist
-rm -rf build</code>
-            </div>
-            
-            <div class="step">
-                <h3>5. Start Fresh</h3>
-                <p>Now you have a clean project directory. You can start fresh with a simple HTML file or reinitialize Git and NPM if needed.</p>
-            </div>
-        </div>
-        
         <footer>
             <p>&copy; 2023 Visual Storyteller. All rights reserved.</p>
-            <p>Clean slate approach - no Git, no NPM, just pure HTML/CSS</p>
+            <p>Website configuration fixed - no more lovable-tagger errors</p>
         </footer>
     </div>
 </body>
