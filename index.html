@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Storyteller - Fresh Start</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .content {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .steps {
+            margin-top: 30px;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .step {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .step h3 {
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+        
+        code {
+            background: #2d3748;
+            color: #c3cfe2;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-family: monospace;
+            display: block;
+            overflow-x: auto;
+            margin: 10px 0;
+            padding: 15px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #2d3748;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Visual Storyteller</h1>
+            <p class="tagline">Photography & Videography Portfolio</p>
+            <div class="nav">
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </header>
+        
+        <div class="content">
+            <div class="card" id="about">
+                <h2>About Me</h2>
+                <p>I'm a visual storyteller specializing in photography and videography. With expertise in DaVinci Resolve post-production, I create compelling visual narratives for portraits, events, and cinematic projects.</p>
+            </div>
+            
+            <div class="card" id="services">
+                <h2>Services</h2>
+                <p>I offer a range of professional photography and videography services including portrait sessions, event coverage, and cinematic storytelling with expert DaVinci Resolve color grading.</p>
+            </div>
+            
+            <div class="card" id="gallery">
+                <h2>Portfolio</h2>
+                <p>My work focuses on capturing emotion and telling stories through visual media. Each project is carefully crafted with attention to composition, lighting, and narrative flow.</p>
+            </div>
+            
+            <div class="card" id="contact">
+                <h2>Contact</h2>
+                <p>Ready to create something amazing together? Get in touch to discuss your project.</p>
+                <p>Email: hello@visualstoryteller.com</p>
+                <p>Based in: San Francisco, CA</p>
+            </div>
+        </div>
+        
+        <div class="steps">
+            <h2>How to Remove Git and NPM Completely</h2>
+            
+            <div class="step">
+                <h3>1. Remove Git Configuration</h3>
+                <p>Delete the .git folder to remove all version history:</p>
+                <code>rm -rf .git</code>
+                <p>On Windows:</p>
+                <code>rmdir /s .git</code>
+            </div>
+            
+            <div class="step">
+                <h3>2. Remove NPM Dependencies</h3>
+                <p>Delete node_modules and package files:</p>
+                <code>rm -rf node_modules
+rm -f package-lock.json
+rm -f package.json</code>
+            </div>
+            
+            <div class="step">
+                <h3>3. Remove Configuration Files</h3>
+                <p>Delete build tool configurations:</p>
+                <code>rm -f .gitignore
+rm -f vite.config.ts
+rm -f tailwind.config.ts
+rm -f tsconfig.json
+rm -f eslint.config.js
+rm -f postcss.config.js</code>
+            </div>
+            
+            <div class="step">
+                <h3>4. Clean Up Build Files</h3>
+                <p>Remove any build directories:</p>
+                <code>rm -rf dist
+rm -rf build</code>
+            </div>
+            
+            <div class="step">
+                <h3>5. Start Fresh</h3>
+                <p>Now you have a clean project directory. You can start fresh with a simple HTML file or reinitialize Git and NPM if needed.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2023 Visual Storyteller. All rights reserved.</p>
+            <p>Clean slate approach - no Git, no NPM, just pure HTML/CSS</p>
+        </footer>
+    </div>
+</body>
+</html>
