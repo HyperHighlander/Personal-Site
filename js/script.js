@@ -15,27 +15,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Smooth Scrolling for Navigation Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+    // Update active navigation link based on URL
+    function setActiveNavLink() {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const linkPath = link.getAttribute('href');
             
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                // Close mobile menu if open
-                navMenu.classList.remove('active');
-                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
-                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+            // Handle root path
+            if (currentPath === '/' && linkPath === '/') {
+                link.classList.add('active');
+            } 
+            // Handle other paths
+            else if (currentPath.startsWith(linkPath) && linkPath !== '/') {
+                link.classList.add('active');
             }
         });
-    });
+    }
+    
+    // Set active nav link on page load
+    setActiveNavLink();
     
     // Portfolio Filtering
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -66,41 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-    });
-    
-    // Portfolio Modal
-    const portfolioModal = document.getElementById('portfolioModal');
-    const modalClose = document.getElementById('modalClose');
-    const modalImage = document.getElementById('modalImage');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDescription = document.getElementById('modalDescription');
-    
-    portfolioItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const imgSrc = this.querySelector('img').src;
-            const title = this.querySelector('h3').textContent;
-            const description = this.querySelector('p').textContent;
-            
-            modalImage.src = imgSrc;
-            modalTitle.textContent = title;
-            modalDescription.textContent = description;
-            
-            portfolioModal.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-    
-    modalClose.addEventListener('click', function() {
-        portfolioModal.classList.remove('open');
-        document.body.style.overflow = 'auto';
-    });
-    
-    // Close modal when clicking outside
-    portfolioModal.addEventListener('click', function(e) {
-        if (e.target === portfolioModal) {
-            portfolioModal.classList.remove('open');
-            document.body.style.overflow = 'auto';
-        }
     });
     
     // Back to Top Button
