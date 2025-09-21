@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Visual Storyteller</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-camera"></i>
+                <a href="index.html">Visual Storyteller</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>My Portfolio</h1>
+            <p>A selection of my recent work</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Portfolio Section -->
+        <section>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="photography">Photography</button>
+                <button class="filter-btn" data-filter="videography">Videography</button>
+                <button class="filter-btn" data-filter="editing">Editing</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="photography">
+                    <img src="https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Portrait Photography">
+                    <div class="portfolio-overlay">
+                        <h3>Portrait Series</h3>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="photography">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2极速?ixlib极速rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wedding Photography">
+                    <div class="portfolio-overlay">
+                        <h3>Wedding Story</h3>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="videography">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&极速=crop&w=800&q=80" alt="Commercial Videography">
+                    <div class="portfolio-overlay">
+                        <h3>Commercial Project</h3>
+                        <p>Videography</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="editing">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Video Editing">
+                    <div class="portfolio-overlay">
+                        <h3>Color Grading</h3>
+                        <p>Editing</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="videography">
+                    <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Documentary Videography">
+                    <div class="portfolio-overlay">
+                        <h3>Documentary</h3>
+                        <p>Videography</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="photography">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nature Photography">
+                    <div class="portfolio-overlay">
+                        <h3>Nature</h3>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="photography">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Urban Photography">
+                    <div class="portfolio-overlay">
+                        <h3>Urban Landscapes</h3>
+                        <p>Photography</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="videography">
+                    <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Event Videography">
+                    <div class="portfolio-overlay">
+                        <h3>Event Coverage</h3>
+                        <p>Videography</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section>
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>What my clients say about my work</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <h3>Amazing Portrait Session</h3>
+                    <p>"The portrait session was incredible! The photographer captured my personality perfectly. The final images were beyond my expectations."</p>
+                    <p class="testimonial-author">- Sarah Johnson</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <h3>Wedding Videography</h3>
+                    <p>"Our wedding video is absolutely beautiful. The editing and color grading made our special day look like a fairy tale. Thank you!"</p>
+                    <p class="testimonial-author">- Michael & Emily</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <h3>Commercial Project</h3>
+                    <p>"The commercial video produced for our business exceeded our expectations. Professional, creative, and delivered on time."</p>
+                    <p class="testimonial-author">- TechSolutions Inc.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <i class="fas fa-camera"></i>
+                <a href="index.html">Visual Storyteller</a>
+            </div>
+            <p>Capturing moments that tell your story</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/shreejan.dahal.008" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/shreejand879/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/ShreejanDahal1" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <p>&copy; 2025 Visual Storyteller. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
