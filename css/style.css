@@ -6,13 +6,14 @@
 }
 
 :root {
-    --dark-bg: #121212;
-    --dark-card: #1e1e1e;
+    --dark-bg: #101319;
+    --dark-card: #16181f;
     --dark-text: #e0e0e0;
     --accent-blue: #00a2ff;
     --bright-blue: #0095ff;
-    --button-bg: #1e1e1e;
-    --button-text: #e0e0e0;
+    --dark-grey: #27272a;
+    --button-bg: #101319;
+    --button-text: #2f8be6;
 }
 
 body {
@@ -26,12 +27,12 @@ body {
 /* Header & Navigation */
 header {
     background-color: var(--dark-card);
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border-bottom: 2px solid var(--bright-blue);
+    border-bottom: 2px solid var(--dark-grey);
 }
 
 .nav-container {
@@ -63,6 +64,7 @@ header {
     display: flex;
     list-style: none;
     gap: 1.5rem;
+    align-items: center;
 }
 
 .nav-menu a {
@@ -80,6 +82,23 @@ header {
     background-color: var(--bright-blue);
     color: var(--dark-bg);
     font-weight: 600;
+}
+
+.nav-social {
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+
+.nav-social a {
+    color: var(--dark-text);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-social a:hover {
+    color: var(--bright-blue);
+    transform: translateY(-3px);
 }
 
 .mobile-menu-btn {
@@ -108,16 +127,31 @@ header {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 4rem;
+    margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: var(--dark-text);
+    background: linear-gradient(90deg, #3d93fc, #b54ad3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    line-height: 1.2;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    opacity: 0.9;
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 2.5rem;
     opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn {
@@ -184,6 +218,10 @@ section {
     font-size: 1.2rem;
 }
 
+.text-center {
+    text-align: center;
+}
+
 /* About Section */
 .about-content {
     display: grid;
@@ -233,7 +271,7 @@ section {
 .about-image {
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 极速3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.5s ease;
     border: 2px solid var(--bright-blue);
 }
@@ -250,30 +288,6 @@ section {
 }
 
 /* Portfolio Section */
-.portfolio-filters {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-    margin-bottom: 3.5rem;
-}
-
-.filter-btn {
-    background-color: var(--dark-card);
-    color: var(--dark-text);
-    border: 2px solid var(--bright-blue);
-    padding: 0.9rem 1.8rem;
-    border-radius: 30px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.filter-btn.active, .filter-btn:hover {
-    background-color: var(--bright-blue);
-    color: var(--dark-bg);
-}
-
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -285,7 +299,6 @@ section {
     overflow: hidden;
     position: relative;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
     height: 280px;
     transition: all 0.3s ease;
     border: 2px solid var(--bright-blue);
@@ -319,7 +332,7 @@ section {
 }
 
 .portfolio-item:hover .portfolio-overlay {
-    opacity: 极速;
+    opacity: 1;
 }
 
 .portfolio-overlay h3 {
@@ -368,91 +381,12 @@ section {
     opacity: 0.9;
 }
 
-/* Contact Section */
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-}
-
-.contact-info {
-    background-color: var(--dark-card);
-    color: var(--dark-text);
-    padding: 3rem;
-    border-radius: 15px;
-    border: 2px solid var(--bright-blue);
-}
-
-.contact-info h3 {
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
-    color: var(--bright-blue);
-}
-
-.contact-detail {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.contact-icon {
-    font-size: 1.8rem;
-    margin-right: 1.5rem;
-    color: var(--bright-blue);
-}
-
-.contact-form {
-    background-color: var(--dark-card);
-    padding: 3rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    border: 2px solid var(--bright-blue);
-}
-
-.contact-form h3 {
-    color: var(--bright-blue);
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-.form-group {
-    margin-bottom: 2rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.8rem;
-    font-weight: 500;
-    color: var(--dark-text);
-}
-
-.form-control {
-    width: 100%;
-    padding: 1.2rem;
-    border: 2px solid var(--bright-blue);
-    border-radius: 8px;
-    font-size: 极速.1rem;
-    transition: all 0.3s ease;
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
-}
-
-.form-control:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 149, 255, 0.3);
-}
-
-textarea.form-control {
-    min-height: 180px;
-    resize: vertical;
-}
-
 /* Footer */
 footer {
     background-color: var(--dark-card);
     color: var(--dark-text);
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     border-top: 2px solid var(--bright-blue);
 }
 
@@ -470,33 +404,6 @@ footer {
     margin: 1.5rem 0;
     font-size: 1.2rem;
     opacity: 0.9;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2.5rem 0;
-}
-
-.social-links a {
-    color: var(--dark-text);
-    font-size: 2rem;
-    transition: all 0.3s ease;
-    border: 2px solid var(--bright-blue);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--dark-card);
-}
-
-.social-links a:hover {
-    color: var(--bright-blue);
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 149, 255, 0.4);
 }
 
 .back-to-top {
@@ -528,14 +435,13 @@ footer {
 
 .back-to-top:hover {
     background-color: var(--bright-blue);
-    color: var(--dark-b极速);
+    color: var(--dark-bg);
     transform: translateY(-5px);
 }
 
 /* Responsive Design */
 @media (max-width: 992px) {
-    .about-content,
-    .contact-container {
+    .about-content {
         grid-template-columns: 1fr;
     }
     
@@ -557,33 +463,36 @@ footer {
         gap: 1.5rem;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: all 0.4s ease;
-        border-top: 2极速 solid var(--bright-blue);
+        border-top: 2px solid var(--bright-blue);
     }
     
     .nav-menu.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
     
+    .nav-social {
+        margin-left: 0;
+        justify-content: center;
+    }
+    
     .mobile-menu-btn {
         display: block;
     }
     
-    .hero h极速 {
+    .hero h1 {
         font-size: 2.5rem;
     }
     
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     .section-title h2 {
         font-size: 2.3rem;
-    }
-    
-    .social-links a {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
     }
 }
 
@@ -603,78 +512,3 @@ footer {
     animation: fadeIn 1s ease forwards;
 }
 
-/* Page-specific styles */
-.page-hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-    color: var(--dark-text);
-}
-
-.page-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.page-hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-/* Portfolio detail styles */
-.portfolio-detail {
-    margin-bottom: 3rem;
-}
-
-.portfolio-detail img {
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 2rem;
-    border: 2px solid var(--bright-blue);
-}
-
-.portfolio-detail h3 {
-    color: var(--bright-blue);
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-}
-
-.portfolio-detail p {
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-/* Service detail styles */
-.service-detail {
-    margin-bottom: 4rem;
-}
-
-.service-detail h3 {
-    color: var(--bright-blue);
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-}
-
-.service-detail p {
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-.service-features {
-    margin-top: 2rem;
-}
-
-.service-features li {
-    margin-bottom: 0.8rem;
-    list-style-type: none;
-    position: relative;
-    padding-left: 2rem;
-}
-
-.service-features li:before {
-    content: "✓";
-    color: var(--bright-blue);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
