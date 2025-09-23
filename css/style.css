@@ -6,9 +6,11 @@
 }
 
 :root {
+    --creamy: #fef3b3;
+    --light-creamy: #fffefe;
     --dark-bg: #101319;
     --dark-card: #16181f;
-    --dark-text: #e0e0e0;
+    --dark-text: #282727;
     --accent-blue: #00a2ff;
     --bright-blue: #0095ff;
     --dark-grey: #27272a;
@@ -17,7 +19,7 @@
 }
 
 body {
-    background-color: var(--dark-bg);
+    background: linear-gradient(to right, var(--creamy) 0%, var(--light-creamy) 60%);
     color: var(--dark-text);
     line-height: 1.6;
     min-height: 100vh;
@@ -26,13 +28,23 @@ body {
 
 /* Header & Navigation */
 header {
-    background-color: var(--dark-card);
-    padding: 1rem 1.5rem;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border-bottom: 2px solid var(--dark-grey);
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95); /* semi-transparent */
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 0;               /* start hidden */
+    pointer-events: none;     /* unclickable when hidden */
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+
+/* visible header */
+.header-visible {
+    opacity: 1;
+    pointer-events: auto;     /* clickable */
 }
 
 .nav-container {
@@ -41,6 +53,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.header-right {
+    font-size: 1rem;
 }
 
 .logo {
@@ -114,7 +135,6 @@ header {
 .hero {
     text-align: center;
     padding: 6rem 2rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
     position: relative;
     color: var(--dark-text);
 }
@@ -130,10 +150,10 @@ header {
     font-size: 4rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(90deg, #3d93fc, #b54ad3);
+    
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: var(--dark-text);
     display: inline-block;
     line-height: 1.2;
 }
@@ -477,6 +497,11 @@ footer {
     
     .mobile-menu-btn {
         display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--dark-text);
+        cursor: pointer;
     }
     
     .hero h1 {

@@ -8,15 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-camera"></i>
-                <a href="index.html">Visual Storyteller</a>
-            </div>
 
-            <!-- Social Icons Top-Right -->
+     <header id="mainHeader" class="header-hidden">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">Hello</a>
+    </div>
+
+    <div class="header-left"> 
+        <h1 id="greeting"></h1> 
+    </div> 
+    <div class="header-right"> 
+        <span id="time"></span> 
+        <span id="date"></span> 
+    </div>
+
             <div class="nav-social">
                 <a href="https://www.facebook.com/shreejan.dahal.008" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook"></i>
@@ -29,19 +35,18 @@
                 </a>
             </div>
 
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+       <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
-
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+    </div>
+  </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">

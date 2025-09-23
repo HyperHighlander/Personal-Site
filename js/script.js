@@ -34,6 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    //HEADER APPEAR ON SCROLL
+    const header = document.getElementById("mainHeader");
+
+    window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) { // show header after 100px scroll
+        header.classList.add("header-visible");
+    } else {
+        header.classList.remove("header-visible");
+    }
+});
     // Set active nav link on page load
     setActiveNavLink();
     
@@ -90,6 +100,31 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    
+    // Greeting based on time
+  function updateGreeting() {
+    const now = new Date();
+    const hour = now.getHours();
+    let greeting = "Hello";
+
+    if (hour < 12) greeting = "Good Morning 🌅";
+    else if (hour < 18) greeting = "Good Afternoon ☀️";
+    else greeting = "Good Evening 🌙";
+
+    document.getElementById("greeting").innerText = greeting;
+  }
+
+  // Time updater
+  function updateTime() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    document.getElementById("time").innerText = timeString;
+  }
+
+  // Run on load + update every minute
+  updateGreeting();
+  updateTime();
+  setInterval(updateTime, 60000);
     
     // Contact Form Submission
     const contactForm = document.getElementById('contactForm');
