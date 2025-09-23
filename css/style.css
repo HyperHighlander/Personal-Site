@@ -47,6 +47,12 @@ header {
     pointer-events: auto;     /* clickable */
 }
 
+
+body:not(.home) header {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;

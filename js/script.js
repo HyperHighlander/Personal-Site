@@ -17,6 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+
+    if (document.body.classList.contains("home")) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                header.classList.add("header-visible");
+            } else {
+                header.classList.remove("header-visible");
+            }
+        });
+    } else {
+        // Make header visible immediately on other pages
+        header.classList.add("header-visible");
+    }
     // Update active navigation link based on current page
     function setActiveNavLink() {
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
