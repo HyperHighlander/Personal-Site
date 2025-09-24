@@ -9,24 +9,70 @@
 </head>
 <body>
     <!-- Header & Navigation -->
-    <header id="mainHeader">
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-camera"></i>
-                <a href="index.html">Visual Storyteller</a>
+    <header id="mainHeader" >
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">Hello</a>
+    </div>
+
+    <div class="header-left"> 
+        <h1 id="greeting"></h1> 
+    </div> 
+    <div class="header-right"> 
+        <span id="time"></span> 
+        <span id="date"></span> 
+    </div>
+
+            <div class="nav-social">
+                <a href="https://www.facebook.com/shreejan.dahal.008" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/shreejand879/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/ShreejanDahal1" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
             </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+
+      <ul class="nav-menu" id="navMenu">
+        
+
+        <li><a href="about.html" class="nav-item">
+            <div class="nav-icon-box about">
+                <img src="icons/about.png" alt="About Icon" class="nav-icon-img">
+            </div>
+        <span>About</span>
+        </a></li>
+
+        <li><a href="portfolio.html" class="nav-item">
+            <div class="nav-icon-box portfolio">
+                <img src="icons/portfolio.png" alt="Portfolio Icon" class="nav-icon-img">
+            </div>
+        <span>Portfolio</span>
+        </a></li>
+
+        <li><a href="services.html" class="nav-item">
+            <div class="nav-icon-box services">
+                <img src="icons/services.png" alt="Services Icon" class="nav-icon-img">
+            </div>
+        <span>Services</span>
+        </a></li>
+
+        <li><a href="contact.html" class="nav-item">
+            <div class="nav-icon-box contact">
+                <img src="icons/contact.png" alt="Contact Icon" class="nav-icon-img">
+            </div>
+        <span>Contact</span>
+    </a></li>
+
+
+      </ul>
+       <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+    </div>
+  </header>
 
     <!-- Page Hero -->
     <section class="page-hero">
