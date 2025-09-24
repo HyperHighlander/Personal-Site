@@ -125,11 +125,6 @@ body:not(.home) header {
 }
 
 
-.nav-icon-box .nav-icon-img:hover {
-  opacity: 0.5;
-  transform: scale(1.05);
-}
-
 .nav-icon-img {
   width: 45px;  /* control icon size */
   height: 45px;
@@ -199,8 +194,41 @@ body:not(.home) header {
 .hero {
     text-align: center;
     padding: 6rem 2rem;
+    
     position: relative;
     color: var(--dark-text);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100vh;
+    height: 100vh;
+   border: 10px solid var(--bright-blue);
+    min-width: 300px;
+    min-height: 300px;
+  border-radius: 50%;
+  background: transparent; /* grey circle */
+  top: 75%;        /* move it up */
+  left: 50%; 
+  transform: translate(-50%, -50%);      /* move it left */
+  z-index: -1;        /* keep it behind the text */
+}
+
+.circle-bg {
+    position: absolute;
+    width: 80vh;
+    height: 80vh;
+    max-width: 800px;
+    max-height: 800px;
+    min-width: 300px;
+    min-height: 300px;
+    border-radius: 50%;
+    background: #ff2d2d;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
 .hero-content {
@@ -312,6 +340,7 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    margin-top: 350px;
 }
 
 .about-text h3 {
